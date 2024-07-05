@@ -57,7 +57,7 @@ const Header = () => {
           </Box>
           <Img
             display={{ base: "none", md: "block" }}
-            src="/src/assets/profil header.png"></Img>
+            src="/public/assets/profil header.png"></Img>
         </Container>
         <Box
           mt={{ base: 20, md: 6 }}
