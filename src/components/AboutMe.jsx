@@ -66,7 +66,7 @@ const AboutMe = () => {
             variants={toTop}
             transition={{ velocity: 0 }}>
             <Img
-              src="/src/assets/profil about.png"
+              src="/assets/profil about.png"
               maxH="400px"
               boxShadow="4px 4px 24px rgba(202, 255, 48, 0.6)"
               border="1px solid rgba(202, 255, 48, 0.6)"

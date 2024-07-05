@@ -57,7 +57,7 @@ const Header = () => {
           </Box>
           <Img
             display={{ base: "none", md: "block" }}
-            src="/public/vite.svg"></Img>
+            src="/assets/profil header.png"></Img>
         </Container>
         <Box
           mt={{ base: 20, md: 6 }}

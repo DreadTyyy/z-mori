@@ -153,7 +153,7 @@ const Project = () => {
                         <Box transform="translate(5%, 16%)" w="100%" h="100%">
                           <Link to={`project/${slug}`}>
                             <Img
-                              src={`/src/assets/${cover}`}
+                              src={`/assets/${cover}`}
                               objectFit="contain"
                               w="90%"
                               h="90%"

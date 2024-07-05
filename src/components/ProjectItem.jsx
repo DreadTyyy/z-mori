@@ -138,7 +138,7 @@ const ProjectItem = ({ projects, currentProject }) => {
           </Box>
           <Box color="whitemori">
             <Image
-              src={`/src/assets/${currentProject.bigCover}`}
+              src={`/assets/${currentProject.bigCover}`}
               alt="header"
               mb={4}
               border="1px solid rgba(202, 255, 48, 0.4)"
@@ -181,7 +181,7 @@ const ProjectItem = ({ projects, currentProject }) => {
                 h="fit-content"
                 objectFit="cover"
                 boxShadow="2xl">
-                <Image src={`/src/assets/${pict}`} />
+                <Image src={`/assets/${pict}`} />
               </GridItem>
             );
           })}
