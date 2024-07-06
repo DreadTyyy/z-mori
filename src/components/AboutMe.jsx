@@ -66,8 +66,9 @@ const AboutMe = () => {
             variants={toTop}
             transition={{ velocity: 0 }}>
             <Img
-              src="/assets/profil about.webp"
+              src="/assets/profil about.png"
               alt="image profil adib haidar zaky"
+              loading="lazy"
               width={300}
               height={400}
               maxH="400px"

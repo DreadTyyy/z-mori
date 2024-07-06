@@ -57,8 +57,9 @@ const Header = () => {
           </Box>
           <Img
             display={{ base: "none", md: "block" }}
-            src="/assets/profil header.webp"
+            src="/assets/profil header.png"
             alt="header profil image"
+            loading="eager"
             width={400}
             height={400}
             objectFit="contain"
