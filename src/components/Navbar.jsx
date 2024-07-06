@@ -6,10 +6,10 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
-  DrawerOverlay,
-  DrawerHeader,
   DrawerFooter,
   useDisclosure,
+  // DrawerOverlay,
+  // DrawerHeader,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { PropTypes } from "prop-types";
@@ -34,7 +34,6 @@ const Navbar = ({ isTop }) => {
         zIndex="9999"
         bgColor={isTop ? "rgba(255, 255, 255, 0)" : "#2E2641"}
         borderBottom={isTop ? "none" : "1px solid #CAFF30"}
-        // backdropFilter={{ base: "blur(16px)", lg: "blur(4px)" }}
         justifyContent="space-between"
         alignItems="center"
         w="100%"
@@ -120,18 +119,19 @@ const Navbar = ({ isTop }) => {
           zIndex="-1"
           minW="100vw"
           size="full">
-          <DrawerOverlay />
-          <DrawerContent bg="rgba(25, 20, 38, 1)">
-            <DrawerHeader
-              borderBottomWidth="1px"
-              borderBottomColor="whitemori"
+          {/* <DrawerOverlay /> */}
+          <DrawerContent bg="rgba(25, 20, 38, 1)" mt="66px">
+            {/* <DrawerHeader
               color="#fff">
               <Box w="100%" h="32px"></Box>
-            </DrawerHeader>
+            </DrawerHeader> */}
             <DrawerBody
-              mt={8}
               display="flex"
+              pt={8}
+              borderTopWidth="1px"
+              borderTopColor="secondary"
               flexDir="column"
+              gap={4}
               alignItems="center">
               <Button
                 as="a"
@@ -174,7 +174,7 @@ const Navbar = ({ isTop }) => {
                 Contact
               </Button>
             </DrawerBody>
-            <DrawerFooter>
+            <DrawerFooter transform="translateY(-68px)">
               <Text as="span" fontSize="16px" color="blackmori.350">
                 Made with love by Mor
               </Text>
@@ -195,5 +195,5 @@ const Navbar = ({ isTop }) => {
 export default Navbar;
 
 Navbar.propTypes = {
-  isTop: PropTypes.boolean,
+  isTop: PropTypes.bool,
 };

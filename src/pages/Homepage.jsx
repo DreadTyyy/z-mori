@@ -35,7 +35,21 @@ const Homepage = () => {
           bgColor="primary">
           <CircleBlur />
           <Suspense
-            fallback={<Box h="100vh" w="100vw" bgColor="primary"></Box>}>
+            fallback={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100vh",
+                  background: "#191426",
+                  color: "#ffffff",
+                  fontSize: "24px",
+                }}>
+                Loading...
+              </div>
+            }>
             <Navbar isTop={isTop} />
             <Header />
             <AboutMe />
