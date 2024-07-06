@@ -136,7 +136,7 @@ const Project = () => {
                         mixBlendMode="screen"></Box>
                       <Box
                         position="absolute"
-                        Top="-40%"
+                        top="-40%"
                         right="-10%"
                         rounded="100%"
                         w="200px"
