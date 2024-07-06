@@ -4,6 +4,7 @@ import CircleBlur from "../components/CircleBlur";
 import PageTransition from "../components/transition/PageTransition";
 import StairsTransition from "../components/transition/StairsTransition";
 import { CiDesktopMouse2 } from "react-icons/ci";
+import ReactGA from "react-ga4";
 
 const Navbar = lazy(() => import("../components/Navbar"));
 const Header = lazy(() => import("../components/Header"));
@@ -13,6 +14,11 @@ const Skills = lazy(() => import("../components/Skills"));
 const Contact = lazy(() => import("../components/Contact"));
 
 const Homepage = () => {
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "home",
+  });
   const [isTop, setIsTop] = useState(true);
 
   window.addEventListener("scroll", () => {

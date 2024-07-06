@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router";
 import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
 import NotFound from "./pages/NotFound";
+import ReactGA from "react-ga4";
 
 const Container = defineStyleConfig({
   // Styles for the base style
@@ -95,6 +96,7 @@ const theme = extendTheme({
 });
 
 function App() {
+  ReactGA.initialize("G-GYE4M20J9L");
   return (
     <>
       <ChakraProvider theme={theme}>
