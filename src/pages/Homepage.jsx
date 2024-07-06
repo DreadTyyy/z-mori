@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import AboutMe from "../components/AboutMe";
-import Project from "../components/Project";
-import Skills from "../components/Skills";
 import CircleBlur from "../components/CircleBlur";
-import Contact from "../components/Contact";
 import PageTransition from "../components/transition/PageTransition";
 import StairsTransition from "../components/transition/StairsTransition";
 import { CiDesktopMouse2 } from "react-icons/ci";
+
+const Navbar = lazy(() => import("../components/Navbar"));
+const Header = lazy(() => import("../components/Header"));
+const AboutMe = lazy(() => import("../components/AboutMe"));
+const Project = lazy(() => import("../components/Project"));
+const Skills = lazy(() => import("../components/Skills"));
+const Contact = lazy(() => import("../components/Contact"));
 
 const Homepage = () => {
   const [isTop, setIsTop] = useState(true);
@@ -33,12 +34,14 @@ const Homepage = () => {
           overflow="hidden"
           bgColor="primary">
           <CircleBlur />
-          <Navbar isTop={isTop} />
-          <Header />
-          <AboutMe />
-          <Project />
-          <Skills />
-          <Contact />
+          <Suspense fallback={<p>Loading...</p>}>
+            <Navbar isTop={isTop} />
+            <Header />
+            <AboutMe />
+            <Project />
+            <Skills />
+            <Contact />
+          </Suspense>
           <Button
             as="a"
             href="#"

@@ -3,10 +3,10 @@ import { Box } from "@chakra-ui/react"; // Assuming you are using Chakra UI for 
 
 const stairsAnimation = {
   initial: {
-    left: "-100%",
+    x: "-100%",
   },
   animate: {
-    left: ["-100%", "0%", "0%", "100%"],
+    x: ["-100%", "0%", "0%", "100%"],
   },
 };
 

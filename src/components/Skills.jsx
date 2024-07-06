@@ -103,7 +103,13 @@ const Skills = () => {
                 bgColor: `rgba(${color}, 0.4)`,
                 transform: "translate(0, -8px)",
               }}>
-              <Img src={`/tech/${name.toLocaleLowerCase()}.png`} />
+              <Img
+                src={`/tech/${name.toLocaleLowerCase()}.webp`}
+                alt={`Icon ${name}`}
+                width={70}
+                height={70}
+                objectFit="contain"
+              />
               <Text color="whitemori">{name}</Text>
             </GridItem>
           ))}

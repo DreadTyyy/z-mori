@@ -67,7 +67,12 @@ const AboutMe = () => {
             transition={{ velocity: 0 }}>
             <Img
               src="/assets/profil about.png"
+              alt="image profil adib haidar zaky"
+              loading="lazy"
+              width={300}
+              height={400}
               maxH="400px"
+              objectFit="cover"
               boxShadow="4px 4px 24px rgba(202, 255, 48, 0.6)"
               border="1px solid rgba(202, 255, 48, 0.6)"
               transition="all 0.5s ease-in-out"
