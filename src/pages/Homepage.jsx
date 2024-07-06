@@ -34,7 +34,8 @@ const Homepage = () => {
           overflow="hidden"
           bgColor="primary">
           <CircleBlur />
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={<Box h="100vh" w="100vw" bgColor="primary"></Box>}>
             <Navbar isTop={isTop} />
             <Header />
             <AboutMe />
