@@ -1,21 +1,26 @@
 import {
   Box,
+  Text,
+  Flex,
   Container,
   Heading,
   Grid,
   GridItem,
-  Spinner,
+  Img,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, useState } from "react";
 import dataProjects from "../utils/dataProjects";
-import { easeTop } from "../utils/scrollAnimations";
-
-const ProjectCard = lazy(() => import("./ProjectCard"));
+import { easeTop, easeBottom } from "../utils/scrollAnimations";
+import { Link } from "react-router-dom";
+import { HiExternalLink } from "react-icons/hi";
+import { FaArrowRightLong } from "react-icons/fa6";
+import TechIcons from "./TechIcons";
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const toTop = easeTop();
+  const toBottom = easeBottom();
   useEffect(() => {
     setProjects(() => dataProjects());
   }, []);
@@ -251,17 +256,3 @@ const Project = () => {
 };
 
 export default Project;
-
-const RenderLoad = () => {
-  return (
-    <GridItem
-      w="500px"
-      h="360px"
-      display="flex"
-      color="secondary"
-      justifyContent="center"
-      alignItems="center">
-      <Spinner size="xl" />
-    </GridItem>
-  );
-};

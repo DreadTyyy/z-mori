@@ -72,9 +72,6 @@ const Homepage = () => {
               _hover={{
                 textDecoration: "none",
               }}>
-              <Text>
-                <CiDesktopMouse2 />
-              </Text>
               <Box
                 display="flex"
                 flexDir={{ base: "column", md: "row" }}
@@ -87,9 +84,9 @@ const Homepage = () => {
                   Top
                 </Text>
               </Box>
-            </Button>
-          </Box>
-        </Suspense>
+            </Box>
+          </Button>
+        </Box>
       </PageTransition>
     </>
   );
