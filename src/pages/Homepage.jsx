@@ -63,18 +63,33 @@ const Homepage = () => {
             </Text>
             <Box
               display="flex"
-              flexDir={{ base: "column", md: "row" }}
-              textAlign="right"
-              gap={{ base: 0, md: 1 }}>
-              <Text fontSize="10px" color="blackmori.150" letterSpacing={1}>
-                Scroll
+              flexDir="column"
+              gap={1}
+              bottom={isTop ? "-100%" : "16px"}
+              right={{ base: "0%", md: "2%" }}
+              fontSize="24px"
+              transition="all 0.5s ease-in-out"
+              _hover={{
+                textDecoration: "none",
+              }}>
+              <Text>
+                <CiDesktopMouse2 />
               </Text>
-              <Text fontSize="10px" color="blackmori.150" letterSpacing={1}>
-                Top
-              </Text>
-            </Box>
-          </Button>
-        </Box>
+              <Box
+                display="flex"
+                flexDir={{ base: "column", md: "row" }}
+                textAlign="right"
+                gap={{ base: 0, md: 1 }}>
+                <Text fontSize="10px" color="blackmori.150" letterSpacing={1}>
+                  Scroll
+                </Text>
+                <Text fontSize="10px" color="blackmori.150" letterSpacing={1}>
+                  Top
+                </Text>
+              </Box>
+            </Button>
+          </Box>
+        </Suspense>
       </PageTransition>
     </>
   );
