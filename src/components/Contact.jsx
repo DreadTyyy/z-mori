@@ -2,6 +2,7 @@ import { Box, Heading, Container, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { easeTop } from "../utils/scrollAnimations";
+import ReactGA from "react-ga4";
 
 const Contact = () => {
   const toTop = easeTop();
@@ -77,6 +78,13 @@ const Contact = () => {
             <Text
               as="a"
               href="mailto:adibhaidarzaky@gmail.com"
+              onClick={() =>
+                ReactGA.event({
+                  category: "mailto",
+                  action: "submit",
+                  label: "mailto",
+                })
+              }
               fontSize={{ base: "16px", md: "20px" }}
               _hover={{ textDecoration: "underline" }}>
               adibhaidarzaky@gmail.com

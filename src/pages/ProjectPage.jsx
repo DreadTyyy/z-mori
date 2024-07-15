@@ -6,6 +6,7 @@ import CircleBlur from "../components/CircleBlur";
 import { useParams, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import dataProjects from "../utils/dataProjects";
+import ReactGA from "react-ga4";
 
 const ProjectPage = () => {
   const params = useParams();
@@ -22,6 +23,11 @@ const ProjectPage = () => {
       const getProject = projects.find((project) => project.slug === params.id);
       if (getProject) {
         setSelectedProjects(getProject);
+        ReactGA.send({
+          hitType: "pageview",
+          page: `/project/${getProject.slug}`,
+          title: getProject.slug,
+        });
       } else {
         navigate("/not-found");
       }
