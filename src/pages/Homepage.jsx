@@ -1,8 +1,7 @@
 import { useState, lazy, Suspense } from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
 import CircleBlur from "../components/CircleBlur";
-import PageTransition from "../components/transition/PageTransition";
-import StairsTransition from "../components/transition/StairsTransition";
+import InitialLoad from "../components/transition/InitialLoad";
 import { CiDesktopMouse2 } from "react-icons/ci";
 import ReactGA from "react-ga4";
 
@@ -30,8 +29,7 @@ const Homepage = () => {
   });
   return (
     <>
-      <StairsTransition />
-      <PageTransition>
+      <InitialLoad>
         <Box
           position="relative"
           w="100%"
@@ -43,17 +41,17 @@ const Homepage = () => {
           <Suspense
             fallback={
               <div
+                className="initialLoading"
                 style={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   width: "100%",
                   height: "100vh",
-                  background: "#191426",
                   color: "#ffffff",
-                  fontSize: "24px",
+                  fontSize: "32px",
                 }}>
-                Loading...
+                Loading<span className="dots"></span>
               </div>
             }>
             <Navbar isTop={isTop} />
@@ -108,7 +106,7 @@ const Homepage = () => {
             </Box>
           </Button>
         </Box>
-      </PageTransition>
+      </InitialLoad>
     </>
   );
 };

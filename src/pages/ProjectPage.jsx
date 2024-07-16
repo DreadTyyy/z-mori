@@ -1,6 +1,5 @@
-import PageTransition from "../components/transition/PageTransition";
 import { Box } from "@chakra-ui/react";
-import StairsTransition from "../components/transition/StairsTransition";
+import InitialLoad from "../components/transition/InitialLoad";
 import ProjectItem from "../components/ProjectItem";
 import CircleBlur from "../components/CircleBlur";
 import { useParams, useNavigate } from "react-router";
@@ -36,8 +35,7 @@ const ProjectPage = () => {
 
   return (
     <>
-      <StairsTransition />
-      <PageTransition>
+      <InitialLoad>
         <Box w="100%" minH="100vh" zIndex="0" overflow="hidden">
           <CircleBlur />
           {selectedProjects && (
@@ -47,7 +45,7 @@ const ProjectPage = () => {
             />
           )}
         </Box>
-      </PageTransition>
+      </InitialLoad>
     </>
   );
 };
