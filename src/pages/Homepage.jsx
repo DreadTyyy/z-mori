@@ -64,6 +64,8 @@ const Homepage = () => {
           <Button
             as="a"
             href="#"
+            px="2px"
+            mr={{ base: "8px", md: "0" }}
             variant="morilink"
             position="fixed"
             zIndex="9999"
@@ -73,6 +75,10 @@ const Homepage = () => {
             bottom={isTop ? "-100%" : "16px"}
             right={{ base: "0%", md: "2%" }}
             fontSize="24px"
+            bgColor={{
+              base: "rgba(255, 255, 255, 0.3)",
+              md: "transparent",
+            }}
             transition="all 0.5s ease-in-out"
             _hover={{
               textDecoration: "none",
@@ -91,12 +97,12 @@ const Homepage = () => {
               _hover={{
                 textDecoration: "none",
               }}>
-              <Box
-                display="flex"
-                flexDir={{ base: "column", md: "row" }}
-                textAlign="right"
-                gap={{ base: 0, md: 1 }}>
-                <Text fontSize="10px" color="blackmori.150" letterSpacing={1}>
+              <Box display="flex" textAlign="right" gap={{ base: 0, md: 1 }}>
+                <Text
+                  display={{ base: "none", md: "hidden" }}
+                  fontSize="10px"
+                  color="blackmori.150"
+                  letterSpacing={1}>
                   Scroll
                 </Text>
                 <Text fontSize="10px" color="blackmori.150" letterSpacing={1}>
