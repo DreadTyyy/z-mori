@@ -88,7 +88,7 @@ const Skills = () => {
               alignItems="center"
               flexDir="column"
               gap={2}
-              w={{ base: "80%", md: "100%" }}
+              w="100%"
               px="36px"
               py="24px"
               border="1px solid #CAFF30"
