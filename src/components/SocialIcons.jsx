@@ -6,11 +6,13 @@ import ReactGA from "react-ga4";
 const SocialIcons = () => {
   const handleClickButton = (item) => {
     ReactGA.event({ category: "social media", action: "click", label: item });
+    console.log(`Event click: ${item}`);
   };
   return (
     <>
       <Button
         as="a"
+        target="_blank"
         href="https://www.instagram.com/adib.zky"
         onClick={() => handleClickButton("instagram")}
         px="0"
@@ -26,6 +28,7 @@ const SocialIcons = () => {
       </Button>
       <Button
         as="a"
+        target="_blank"
         href="https://www.linkedin.com/in/adib-zaky-b1817a248/"
         onClick={() => handleClickButton("linkedin")}
         variant="morilink"
@@ -42,6 +45,7 @@ const SocialIcons = () => {
       </Button>
       <Button
         as="a"
+        target="_blank"
         href="https://github.com/DreadTyyy/"
         onClick={() => handleClickButton("github")}
         variant="morilink"
