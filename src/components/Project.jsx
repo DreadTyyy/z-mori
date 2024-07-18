@@ -211,7 +211,7 @@ const Project = () => {
                         alignItems={{ base: "start", md: "center" }}>
                         <Flex
                           alignItems="center"
-                          justifyContent="center"
+                          justifyContent={{ base: "center", md: "start" }}
                           flexWrap="wrap"
                           gap={2}
                           fontSize="18px">

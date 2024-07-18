@@ -39,7 +39,7 @@ const AboutMe = () => {
           style={{
             padding: "32px 0",
             perspective: 800,
-            width: "100%",
+            width: "400px",
             height: "100%",
             maxWidth: "450px",
             cursor: "pointer",
