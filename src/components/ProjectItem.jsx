@@ -136,7 +136,7 @@ const ProjectItem = ({ projects, currentProject }) => {
               )}
             </Flex>
           </Box>
-          <Box color="whitemori">
+          <Box color="whitemori" position="relative" zIndex="1">
             <Image
               src={`/assets/${currentProject.bigCover}`}
               alt={`header ${currentProject.title}`}
@@ -163,6 +163,8 @@ const ProjectItem = ({ projects, currentProject }) => {
         </Flex>
       </Container>
       <Container
+        position="relative"
+        zIndex="1"
         py={{ base: "32px", md: "56px" }}
         w="100%"
         h="100%"
