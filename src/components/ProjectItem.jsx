@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 import ProjectPagination from "./ProjectPagination";
+import TechIcons from "./TechIcons";
 import { HiExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -79,8 +80,12 @@ const ProjectItem = ({ projects, currentProject }) => {
             <Heading as="h6" size="md" color="secondary">
               DESCRIPTION
             </Heading>
-            <Flex flexDir="column" py={4} gap={1}>
-              <Text maxW="400px">{currentProject.content}</Text>
+            <Flex flexDir="column" py={4} gap={4}>
+              {currentProject.content.map((word, index) => (
+                <Text maxW="400px" textAlign="justify" key={index}>
+                  {word}
+                </Text>
+              ))}
             </Flex>
             <Flex alignItems="center" gap={8}>
               <Button
@@ -148,16 +153,15 @@ const ProjectItem = ({ projects, currentProject }) => {
             <Heading as="h6" size="md" color="secondary">
               TECH
             </Heading>
-            <Flex py={4}>
-              <Text>
-                {currentProject.technology.map((tech, index) => {
-                  if (index === currentProject.technology.length - 1) {
-                    return <span key={index}>and {tech}</span>;
-                  } else {
-                    return <span key={index}>{tech}, </span>;
-                  }
-                })}
-              </Text>
+            <Flex py={4} gap={6} flexWrap="wrap">
+              {currentProject.technology.map((tech) => (
+                <Box key={tech} display="flex" gap={2} alignItems="center">
+                  <TechIcons icon={tech} />
+                  <Text color="whitemori" opacity={0.8}>
+                    {tech}
+                  </Text>
+                </Box>
+              ))}
             </Flex>
           </Box>
         </Flex>
