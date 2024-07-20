@@ -90,19 +90,14 @@ const ProjectItem = ({ projects, currentProject }) => {
             <Flex alignItems="center" gap={8}>
               <Button
                 as="a"
-                px="0"
                 target="_blank"
                 href={currentProject.urlSite}
-                variant="morilink"
+                variant="moriprimary"
                 display="flex"
                 alignItems="center"
                 gap={2}
-                fontWeight={600}
-                transition="all 0.2s ease-in"
-                _hover={{
-                  textDecoration: "underline",
-                  color: "secondary",
-                }}>
+                fontSize="16px"
+                transition="all 0.2s ease-in">
                 Open Project{" "}
                 <Text as="span" fontSize="20px">
                   <HiExternalLink />
@@ -111,21 +106,15 @@ const ProjectItem = ({ projects, currentProject }) => {
               {currentProject.github && (
                 <Button
                   as="a"
-                  px="0"
                   target="_blank"
                   href={currentProject.github}
+                  variant="moriborder"
                   role="group"
                   display="flex"
                   alignItems="center"
                   gap={2}
-                  variant="morilink"
-                  fontWeight={600}
-                  color="secondary"
-                  transition="all 0.2s ease-in"
-                  _hover={{
-                    textDecoration: "none",
-                    textShadow: "1px 1px 8px rgba(202, 255, 48, 0.6)",
-                  }}>
+                  fontSize="16px"
+                  transition="all 0.2s ease-in">
                   Repository Github{" "}
                   <Text
                     as="span"
