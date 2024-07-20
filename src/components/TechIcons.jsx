@@ -25,7 +25,7 @@ const TechIcons = ({ icon, customColor }) => {
     python: { name: FaPython, color: "#387EB8" },
     javascript: { name: SiJavascript, color: "#F7DF1E" },
     php: { name: SiPhp, color: "#6181B6" },
-    chakraui: { name: SiChakraui, color: "#38BDF8" },
+    "chakra ui": { name: SiChakraui, color: "#38BDF8" },
     tailwind: { name: RiTailwindCssFill, color: "#38BDF8" },
     mysql: { name: SiMysql, color: "#ffffff", size: "28px" },
     express: { name: SiExpress, color: "#ffffff" },
