@@ -23,7 +23,7 @@ const socialMedia = [
   },
   {
     name: "LinkedIn",
-    username: "@adib zaky",
+    username: "Adib Zaky",
     url: "https://www.linkedin.com/in/adib-zaky-b1817a248/",
     icon: SlSocialLinkedin,
   },
@@ -37,6 +37,10 @@ const socialMedia = [
 
 const Contact = () => {
   const toTop = easeTop();
+  const handleClickButton = (item) => {
+    ReactGA.event({ category: "social media", action: "click", label: item });
+    console.log(`Event click: ${item}`);
+  };
   return (
     <Box id="contact">
       <Container
@@ -132,6 +136,7 @@ const Contact = () => {
                 as="a"
                 target="_blank"
                 href={item.url}
+                onClick={() => handleClickButton(item.name.toLowerCase())}
                 display="flex"
                 w="fit-content"
                 alignItems="center"
