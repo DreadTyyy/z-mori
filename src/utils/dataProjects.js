@@ -1,6 +1,32 @@
 const dataProjects = () => {
   return [
     {
+      id: 6,
+      title: "Dashboard Blog Wsbcyber",
+      cover: "dashboardwsbcyber.webp",
+      bigCover: "dashboardwsbcyber-head.webp",
+      pictures: [
+        "dashboardwsbcyber.webp",
+        "dashboardwsbcyber2.webp",
+        "dashboardwsbcyber3.webp",
+        "dashboardwsbcyber4.webp",
+      ],
+      slug: "dashboard-blog-wsbcyber",
+      category: ["Full Stack Development", "Web Development"],
+      description:
+        "Freelance project for creating a CMS admin blog dashboard. I was responsible for designing, developing the frontend, and building the backend.",
+      content: [
+        "This freelance project is a continuation of my previous project with wsbcyber to redesign their website. With the same client, I was tasked with creating a CMS admin blog dashboard for wsbcyber. This project aims to facilitate the management of the blog and admin sections of the wsbcyber website. My role was to build the website from data schema creation, design, implementation, to integration with the database. The design for the blog pages was provided by the client, so I focused on creating the design for the blog dashboard pages.",
+        "This was my first experience working on a big project for a company. The big challenge for me was to build a well-functioning and maintainable website. Before starting, I researched the necessary features for the dashboard. Integrating each feature was also a significant challenge.",
+        "Another challenge I faced was using Typescript and Chakra UI for the frontend. This was my first experience with this tech stack. Through hard work and a desire to learn, I successfully overcame this challenge.",
+        "After some time of work and revisions, I successfully completed this project. From building the dashboard, backend API, and the blog pages. This project received positive feedback from my client and is now online.",
+      ],
+      date: "2024",
+      technology: ["React", "Chakra UI", "MySQL", "Express"],
+      github: "",
+      urlSite: "https://wsbcyber.com/",
+    },
+    {
       id: 2,
       title: "Together App",
       cover: "together.webp",
@@ -19,7 +45,7 @@ const dataProjects = () => {
         "Project website development challange from IdCamp. This website is a shared platform for people with disabilities. On this website, users can do various things, such as creating discussion forums, posting blogs, and participating in contests. The website is equipped with a login feature that allows users to express their thoughts through their respective accounts. Users can interact with other users using the forum feature provided on this website. In working on this project, I learned new things about creating APIs using Express to connect the database displayed on the website with ReactJS.",
       ],
       date: "2024",
-      technology: ["React", "Tailwind", "Javascript", "MySQL", "Express"],
+      technology: ["React", "Tailwind", "MySQL", "Express"],
       github: "",
       urlSite: "https://app-togheter-lac.vercel.app/",
     },
@@ -37,7 +63,7 @@ const dataProjects = () => {
         "Personal project web application. This website is an application used to obtain information about movies and TV shows. It provides a search feature that allows users to find desired movies. The website is connected to the IMDB API to retrieve movie data, which is then displayed on the site. Users can view the latest and most popular movies sourced from IMDB. In this project, I learned how to fetch API data from IMDB using ReactJS.",
       ],
       date: "2024",
-      technology: ["React", "Tailwind", "Javascript"],
+      technology: ["React", "Tailwind"],
       github: "https://github.com/DreadTyyy/movieStar/",
       urlSite: "https://movie-star-jrfj.vercel.app/",
     },
