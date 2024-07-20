@@ -43,6 +43,21 @@ const Button = defineStyleConfig({
   },
   // Styles for the visual style variations
   variants: {
+    moriprimary: {
+      bg: "#CAFF30",
+      color: "#191426",
+      _hover: {
+        bg: "#A8D428",
+      },
+    },
+    moriborder: {
+      bg: "transparent",
+      border: "1px solid #CAFF30",
+      color: "#CAFF30",
+      _hover: {
+        boxShadow: "0 0 6px 1px rgba(202, 255, 48, 0.5)",
+      },
+    },
     moriwhite: {
       bg: "#F1F1F1",
       color: "#0C0D0D",
