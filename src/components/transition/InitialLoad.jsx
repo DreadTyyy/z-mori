@@ -9,7 +9,7 @@ const InitialLoad = ({ children }) => {
   const [initial, setInitial] = useState(false);
 
   useEffect(() => {
-    const data = localStorage.getItem("initial");
+    const data = sessionStorage.getItem("initial");
     if (data === "1") {
       setInitial(false);
     } else {
@@ -20,9 +20,9 @@ const InitialLoad = ({ children }) => {
   useEffect(() => {
     if (initial) {
       const timer = setTimeout(() => {
-        localStorage.setItem("initial", "1");
+        sessionStorage.setItem("initial", "1");
         setInitial(false);
-      }, 5000);
+      }, 4000);
 
       return () => {
         clearTimeout(timer);
@@ -53,6 +53,7 @@ const InitialLoad = ({ children }) => {
             animate={{ opacity: 1, y: 80 }}
             transition={{
               ease: "easeIn",
+              delay: 3,
               duration: 0.3,
               repeat: Infinity,
               repeatType: "reverse",
