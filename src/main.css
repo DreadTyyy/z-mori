@@ -27,6 +27,22 @@ body::-webkit-scrollbar-thumb:hover {
   animation: dots 1s steps(4, end) infinite;
 }
 
+.text-color-change {
+  animation: colorChange 16s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #caff30;
+  }
+  50% {
+    color: #23cdeb;
+  }
+  100% {
+    color: #e44f26;
+  }
+}
+
 @keyframes dots {
   0%,
   25% {
