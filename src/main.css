@@ -28,17 +28,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .text-color-change {
-  animation: colorChange 16s infinite;
+  animation: colorChange 24s infinite;
 }
 
 @keyframes colorChange {
-  0% {
+  0%,
+  100% {
     color: #caff30;
   }
-  50% {
+  35% {
     color: #23cdeb;
   }
-  100% {
+  70% {
     color: #e44f26;
   }
 }

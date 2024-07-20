@@ -127,9 +127,10 @@ const Contact = () => {
           </Box>
           <Grid
             my={4}
-            templateColumns="repeat(4, 1fr)"
+            templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
             rowGap={8}
-            columnGap={32}>
+            justifyItems="center"
+            columnGap={{ base: 4, md: 16, lg: 32 }}>
             {socialMedia.map((item) => (
               <GridItem
                 key={item.name}
@@ -157,7 +158,7 @@ const Contact = () => {
                 <Box
                   className="text-color-change"
                   color="secondary"
-                  fontSize="18px">
+                  fontSize={{ base: "16px", md: "18px" }}>
                   <Box h="28px" overflow="hidden" textAlign="left">
                     <Text
                       transition="all 0.2s linear"
