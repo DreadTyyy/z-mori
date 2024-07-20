@@ -1,8 +1,39 @@
-import { Box, Heading, Container, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Container,
+  Text,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { easeTop } from "../utils/scrollAnimations";
 import ReactGA from "react-ga4";
+import { FaInstagram, FaGithub } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { SlSocialLinkedin } from "react-icons/sl";
+
+const socialMedia = [
+  {
+    name: "Instagram",
+    username: "@adib.zky",
+    url: "https://www.instagram.com/adib.zky",
+    icon: FaInstagram,
+  },
+  {
+    name: "LinkedIn",
+    username: "@adib zaky",
+    url: "https://www.linkedin.com/in/adib-zaky-b1817a248/",
+    icon: SlSocialLinkedin,
+  },
+  {
+    name: "Github",
+    username: "DreadTyyy",
+    url: "https://github.com/DreadTyyy/",
+    icon: FaGithub,
+  },
+];
 
 const Contact = () => {
   const toTop = easeTop();
@@ -90,6 +121,63 @@ const Contact = () => {
               adibhaidarzaky@gmail.com
             </Text>{" "}
           </Box>
+          <Grid
+            my={4}
+            templateColumns="repeat(4, 1fr)"
+            rowGap={8}
+            columnGap={32}>
+            {socialMedia.map((item) => (
+              <GridItem
+                key={item.name}
+                as="a"
+                target="_blank"
+                href={item.url}
+                display="flex"
+                w="fit-content"
+                alignItems="center"
+                gap={4}
+                cursor="pointer"
+                role="group">
+                <Box
+                  color="primary"
+                  bgColor="blackmori.150"
+                  p={3}
+                  rounded="8px"
+                  transition="all 0.3s ease-in"
+                  _groupHover={{
+                    bgColor: "secondary",
+                  }}>
+                  <item.icon fontSize="24px" />
+                </Box>
+                <Box
+                  className="text-color-change"
+                  color="secondary"
+                  fontSize="18px">
+                  <Box h="28px" overflow="hidden" textAlign="left">
+                    <Text
+                      transition="all 0.2s linear"
+                      _groupHover={{ transform: "translate(0, -28px)" }}>
+                      {item.name}
+                    </Text>
+                    <Text
+                      transition="all 0.2s linear"
+                      _groupHover={{ transform: "translate(0, -28px)" }}>
+                      {item.username}
+                    </Text>
+                  </Box>
+                  <Text
+                    transform="rotate(-45deg)"
+                    w="fit-content"
+                    transition="all 0.3s linear"
+                    _groupHover={{
+                      transform: "rotate(0deg)",
+                    }}>
+                    <FaArrowRightLong />
+                  </Text>
+                </Box>
+              </GridItem>
+            ))}
+          </Grid>
           <Box mt={16}>
             <Box
               display="flex"
@@ -118,7 +206,8 @@ const Contact = () => {
               Made with love
             </Text>
             <Text fontSize="14px" color="blackmori.500">
-              Copyright &copy; 2024 by Adib Zaky
+              {/* Copyright &copy; */}
+              by Adib Zaky 2024
             </Text>
           </Box>
         </Box>
