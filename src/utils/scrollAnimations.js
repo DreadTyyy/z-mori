@@ -13,7 +13,7 @@ const ease = () => {
     },
   };
 };
-const easeTop = () => {
+const easeTop = (delay, duration) => {
   return {
     offscreen: {
       y: 100,
@@ -24,8 +24,9 @@ const easeTop = () => {
       opacity: 1,
       transition: {
         // type: "spring",
+        delay: delay || 0,
         bounce: 0.4,
-        duration: 0.8,
+        duration: duration || 0.8,
       },
     },
   };
