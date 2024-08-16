@@ -31,7 +31,7 @@ const ProjectItem = ({ projects, currentProject }) => {
         alignItems="flex-start"
         bgColor="primary">
         <Flex justifyContent="space-between" alignItems="center" w="100%">
-          <Link to="/#projects">
+          <Link to="/">
             <Flex
               alignItems="center"
               gap={2}
@@ -46,7 +46,7 @@ const ProjectItem = ({ projects, currentProject }) => {
               </Text>
             </Flex>
           </Link>
-          <Box>
+          <Box display="flex" gap={2}>
             <SocialIcons />
           </Box>
         </Flex>
