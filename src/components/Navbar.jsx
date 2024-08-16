@@ -8,16 +8,17 @@ import {
   DrawerContent,
   DrawerFooter,
   useDisclosure,
+  Show,
   // DrawerOverlay,
   // DrawerHeader,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { PropTypes } from "prop-types";
-import { ease } from "../utils/scrollAnimations";
+import { easeTop } from "../utils/scrollAnimations";
 
 const Navbar = ({ isTop }) => {
   const drawer = useDisclosure();
-  const show = ease();
+  const show = easeTop();
 
   return (
     <motion.div
@@ -40,6 +41,12 @@ const Navbar = ({ isTop }) => {
         px={{ base: "5%", md: "64px" }}
         py="12px"
         transition="all 0.2s ease-in-out">
+        <motion.div 
+          initial="offscreen"
+          whileInView="onscreen"
+          variants={show}
+          viewport={{ once: true, amount: 0.8 }}
+        >
         <Box display="flex" alignItems="center" color="whitemori">
           <Text fontSize={{ base: "24px" }} fontWeight={700}>
             Mor
@@ -55,22 +62,58 @@ const Navbar = ({ isTop }) => {
             /&gt;
           </Text>
         </Box>
+        </motion.div>
         <Box display={{ base: "none", lg: "flex" }} gap={4}>
+          <motion.div 
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={easeTop(0.4)}
+            viewport={{ once: true, amount: 0.8 }}
+          >
           <Button as="a" href="#" variant="morilink" fontSize="16px">
             Home
           </Button>
+          </motion.div>
+          <motion.div 
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={easeTop(0.3)}
+            viewport={{ once: true, amount: 0.8 }}
+          >
           <Button as="a" href="#about-me" variant="morilink" fontSize="16px">
             About Me
           </Button>
+          </motion.div>
+          <motion.div 
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={easeTop(0.2)}
+            viewport={{ once: true, amount: 0.8 }}
+          >
           <Button as="a" href="#projects" variant="morilink" fontSize="16px">
             Projects
           </Button>
+          </motion.div>
+          <motion.div 
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={easeTop(0.1)}
+            viewport={{ once: true, amount: 0.8 }}
+          >
           <Button as="a" href="#skills" variant="morilink" fontSize="16px">
             Skills
           </Button>
+          </motion.div>
+          <motion.div 
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={Show}
+            viewport={{ once: true, amount: 0.8 }}
+          >
           <Button as="a" href="#contact" variant="morilink" fontSize="16px">
             Contact
           </Button>
+          </motion.div>
         </Box>
         <Box
           as="button"
