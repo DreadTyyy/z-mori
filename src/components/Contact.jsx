@@ -18,7 +18,7 @@ const socialMedia = [
   {
     name: "Instagram",
     username: "@adib.zky",
-    url: "https://www.instagram.com/adib.zky",
+    url: "https://www.instagram.com/adib.zaky_/",
     icon: FaInstagram,
   },
   {

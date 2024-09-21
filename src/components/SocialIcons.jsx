@@ -7,7 +7,7 @@ import ReactGA from "react-ga4";
 const socials = [
   {
     name: 'instagram',
-    href: 'https://www.instagram.com/adib.zky',
+    href: 'https://www.instagram.com/adib.zaky_/',
     icon: FaInstagram
   },
   {
