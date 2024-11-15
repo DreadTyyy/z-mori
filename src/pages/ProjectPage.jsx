@@ -2,20 +2,26 @@ import { Box } from "@chakra-ui/react";
 import InitialLoad from "../components/transition/InitialLoad";
 import ProjectItem from "../components/ProjectItem";
 import CircleBlur from "../components/CircleBlur";
-import { useParams, useNavigate } from "react-router";
+import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import dataProjects from "../utils/dataProjects";
 import ReactGA from "react-ga4";
+import NotFound from "./NotFound";
 
 const ProjectPage = () => {
   const params = useParams();
-  const navigate = useNavigate();
   const [projects, setProjects] = useState([]);
   const [selectedProjects, setSelectedProjects] = useState("");
 
   useEffect(() => {
     setProjects(() => dataProjects());
   }, []);
+
+  useEffect(() => {
+    if (selectedProjects) {
+      document.title = `${selectedProjects.title} — Adib Zaky`
+    }
+  })
 
   useEffect(() => {
     if (projects.length > 0) {
@@ -28,10 +34,14 @@ const ProjectPage = () => {
           title: getProject.slug,
         });
       } else {
-        navigate("/not-found");
+        setSelectedProjects("not_found");
       }
     }
-  }, [navigate, params.id, projects]);
+  }, [params.id, projects]);
+
+  if (selectedProjects === "not_found") {
+    return <NotFound />
+  }
 
   return (
     <>
