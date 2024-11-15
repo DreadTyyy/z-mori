@@ -18,12 +18,6 @@ const ProjectPage = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedProjects) {
-      document.title = `${selectedProjects.title} — Adib Zaky`
-    }
-  })
-
-  useEffect(() => {
     if (projects.length > 0) {
       const getProject = projects.find((project) => project.slug === params.id);
       if (getProject) {

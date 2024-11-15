@@ -17,8 +17,15 @@ import { HiExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { PropTypes } from "prop-types";
+import { useEffect } from "react";
 
 const ProjectItem = ({ projects, currentProject }) => {
+  useEffect(() => {
+    if (currentProject) {
+      document.title = `${currentProject.title} — Adib Zaky`
+    }
+  })
+
   return (
     <>
       <Container
