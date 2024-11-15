@@ -1,7 +1,10 @@
 import { Box, Text } from "@chakra-ui/react";
+import { useEffect } from "react";
 
 const NotFound = () => {
-  document.title = "404: Page not found";
+  useEffect(() => {
+    document.title = "404: Page not found";
+  })
   return (
     <Box
       w="100%"
