@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
 import CircleBlur from "../components/CircleBlur";
 import InitialLoad from "../components/transition/InitialLoad";
@@ -19,6 +19,10 @@ const Homepage = () => {
     title: "home",
   });
   const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    document.title = "Adib Zaky — Portofolio"
+  })
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 80) {
