@@ -12,7 +12,7 @@ const socials = [
   },
   {
     name: 'linkedin',
-    href: 'https://www.linkedin.com/in/adib-zaky-b1817a248/',
+    href: 'https://www.linkedin.com/in/adibhzaky/',
     icon: SlSocialLinkedin
   },
   {

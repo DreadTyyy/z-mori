@@ -24,7 +24,7 @@ const socialMedia = [
   {
     name: "LinkedIn",
     username: "Adib Zaky",
-    url: "https://www.linkedin.com/in/adib-zaky-b1817a248/",
+    url: "https://www.linkedin.com/in/adibhzaky/",
     icon: SlSocialLinkedin,
   },
   {
