@@ -90,7 +90,7 @@ const ProjectItem = ({ projects, currentProject }) => {
             <Flex flexDir="column" py={4} gap={4}>
               {currentProject.content.map((word, index) => (
                 <Text maxW="400px" textAlign="justify" key={index}>
-                  {word}
+                  <div dangerouslySetInnerHTML={{ __html: word }} />
                 </Text>
               ))}
             </Flex>
@@ -137,7 +137,7 @@ const ProjectItem = ({ projects, currentProject }) => {
               )}
             </Flex>
           </Box>
-          <Box color="whitemori" position="relative" zIndex="1">
+          <Box color="whitemori" position="relative" zIndex="1" maxW={{ base: "full", md: "50%" }}>
             <Image
               src={`/assets/${currentProject.bigCover}`}
               alt={`header ${currentProject.title}`}

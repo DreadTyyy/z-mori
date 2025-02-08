@@ -1,6 +1,33 @@
 const dataProjects = () => {
   return [
     {
+      id: 7,
+      title: "SociaLens",
+      cover: "socialens2.png",
+      bigCover: "socialens-head.png",
+      pictures: [
+        "socialens.png",
+        "socialens2.png",
+        "socialens3.png",
+        "socialens4.png",
+      ],
+      slug: "socialens",
+      category: ["Web Development", "Machine Learning"],
+      description:
+        "SociaLens: A review sentiment analysis website that utilizes Machine Learning technology to predict review sentiment and provide reports regarding review sentiment.",
+      content: [
+        "<i>Background</i>",
+        "SociaLens is a web-based sentiment analysis platform designed to help analyze customer reviews. With Machine Learning technology, SociaLens is able to detect and predict customer review sentiment—both positive and negative. Reports are presented in the form of informative data visualizations, such as diagrams and graphs, making it easier for users to analyze sentiment trends and understand the image of their business in the eyes of customers. SociaLens helps make strategic decisions based on data to improve service quality and competitiveness.",
+        "<i>Development</i>",
+        "This application was developed through a series of system design stages, starting from creating the application flow, UI design, to database design. The website interface was built using React and TypeScript, with Chakra UI as the styling system to facilitate responsive and intuitive UI development. Website development includes various pages, from the Homepage to the Analysis Dashboard to display review sentiment results visually.",
+        "To connect a website with a MySQL database, this application uses Express as the backend API. Meanwhile, the API for Machine Learning models was developed using Flask. The Machine Learning model is built with TensorFlow, applying Natural Language Processing (NLP) techniques to process text and accurately predict review sentiment—both positive and negative.",
+      ],
+      date: "2025",
+      technology: ["React", "Express", "Flask", "Typescript", "TensorFlow"],
+      github: "https://github.com/DreadTyyy/",
+      urlSite: "https://socialens-eight.vercel.app/",
+    },
+    {
       id: 6,
       title: "Dashboard Blog Wsbcyber",
       cover: "dashboardwsbcyber.webp",
