@@ -11,6 +11,9 @@ import {
   SiJavascript,
   SiPhp,
   SiChakraui,
+  SiTypescript,
+  SiFlask,
+  SiTensorflow,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { PropTypes } from "prop-types";
@@ -27,8 +30,11 @@ const TechIcons = ({ icon, customColor }) => {
     php: { name: SiPhp, color: "#6181B6" },
     "chakra ui": { name: SiChakraui, color: "#38BDF8" },
     tailwind: { name: RiTailwindCssFill, color: "#38BDF8" },
+    typescript: { name: SiTypescript, color: "#007acc" },
     mysql: { name: SiMysql, color: "#ffffff", size: "28px" },
     express: { name: SiExpress, color: "#ffffff" },
+    flask: { name: SiFlask, color: "#ffffff" },
+    tensorflow: { name: SiTensorflow , color: "#FF6F00" },
   };
 
   const iconData = iconMap[icon.toLowerCase()];
