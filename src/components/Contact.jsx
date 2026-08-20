@@ -213,7 +213,7 @@ const Contact = () => {
             </Text>
             <Text fontSize="14px" color="blackmori.500">
               {/* Copyright &copy; */}
-              by Adib Zaky 2024
+              by Adib Zaky 2026
             </Text>
           </Box>
         </Box>
