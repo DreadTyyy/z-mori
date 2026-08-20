@@ -11,14 +11,16 @@ import { easeTop } from "../utils/scrollAnimations";
 import { motion } from "framer-motion";
 
 const items = [
-  { name: "HTML5", color: "241, 102, 42" },
-  { name: "CSS", color: "51, 169, 220" },
-  { name: "Tailwind", color: "0, 216, 255" },
-  { name: "Javascript", color: "247, 233, 30" },
-  { name: "ReactJS", color: "0, 216, 255" },
-  { name: "Bootstrap", color: "117, 17, 247" },
-  { name: "PHP", color: "97, 129, 182" },
-  { name: "Python", color: "56, 127, 185" },
+  // { name: "HTML5", color: "241, 102, 42" },
+  // { name: "CSS", color: "51, 169, 220" },
+  { name: "Tailwind", format: "webp", color: "0, 216, 255" },
+  { name: "Javascript", format: "webp", color: "247, 233, 30" },
+  { name: "ReactJS", format: "webp", color: "0, 216, 255" },
+  { name: "Typescript", format: "webp", color: "51, 169, 220" },
+  { name: "Express", format: "svg", color: "100, 100, 100" },
+  { name: "Bootstrap", format: "webp", color: "117, 17, 247" },
+  { name: "PHP", format: "webp", color: "97, 129, 182" },
+  { name: "Python", format: "webp", color: "56, 127, 185" },
 ];
 
 const Skills = () => {
@@ -78,7 +80,7 @@ const Skills = () => {
           }}
           gap={{ base: 4, md: 12 }}
           alignContent="center">
-          {items.map(({ name, color }) => (
+          {items.map(({ name, format, color }) => (
             <GridItem
               key={name}
               userSelect="none"
@@ -104,7 +106,7 @@ const Skills = () => {
                 transform: "translate(0, -8px)",
               }}>
               <Img
-                src={`/tech/${name.toLocaleLowerCase()}.webp`}
+                src={`/tech/${name.toLocaleLowerCase()}.${format}`}
                 alt={`Icon ${name}`}
                 width={70}
                 height={70}
