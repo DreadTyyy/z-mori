@@ -129,11 +129,8 @@ const AboutMe = () => {
               color="whitemori"
               textAlign={{ base: "justify", md: "left" }}
               maxW="560px">
-              Hi, I am Adib Haidar Zaky, a student with an interest in front-end
-              web development and UI/UX. I have a passion for technology and
-              hope to bring positive energy through technological advancements
-              for a better future. I am currently completing my studies as an
-              undergraduate Mathematics student at Universitas Sebelas Maret.
+              Hi, I'm Adib Haidar Zaky, a Mathematics graduate from Universitas Sebelas Maret with a strong passion for software and mobile development. I enjoy building web and mobile applications and also exploring areas like machine learning and cybersecurity. I have a passion for technology and hope to bring positive energy through technological advancements
+              for a better future.
             </Text>
             <Box
               display="flex"
