@@ -16,10 +16,15 @@ import TechIcons from "./TechIcons";
 import { HiExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { PropTypes } from "prop-types";
 import { useEffect } from "react";
+import type { ProjectType } from "@/utils/dataProjects";
 
-const ProjectItem = ({ projects, currentProject }) => {
+const ProjectItem = ({ 
+  projects, currentProject 
+}: {
+  projects: ProjectType[];
+  currentProject: ProjectType;
+}) => {
   useEffect(() => {
     if (currentProject) {
       document.title = `${currentProject.title} — Adib Zaky`
@@ -199,8 +204,3 @@ const ProjectItem = ({ projects, currentProject }) => {
 };
 
 export default ProjectItem;
-
-ProjectItem.propTypes = {
-  projects: PropTypes.array.isRequired,
-  currentProject: PropTypes.object.isRequired,
-};

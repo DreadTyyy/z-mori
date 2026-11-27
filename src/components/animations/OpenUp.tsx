@@ -1,20 +1,19 @@
-import { easeIn, motion } from 'framer-motion';
+import { easeIn, motion } from "framer-motion";
 
 const animate = {
     offscreen: {
-      height: '0px',
+      height: "0px",
     },
     onscreen: {
-      height: ['2px', 'fit-content'],
+      height: ["2px", "fit-content"],
     },
   }
 
-// eslint-disable-next-line react/prop-types
-const OpenUp = ({ children }) => {
+const OpenUp = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div style={{ position: 'relative', height: 'fit-content', minHeight: '400px' }}>
+    <div style={{ position: "relative", height: "fit-content", minHeight: "400px" }}>
       <motion.div
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: "hidden" }}
         initial="offscreen"
         // animate="onscreen"
         whileInView="onscreen"

@@ -7,20 +7,26 @@ import {
   Img,
   Text,
 } from "@chakra-ui/react";
-import { easeTop } from "../utils/scrollAnimations";
+import { easeTop } from "@/utils/scrollAnimations";
 import { motion } from "framer-motion";
 
-const items = [
+type SkillType = {
+  name: string;
+  format: string;
+  color: string;
+}
+
+const items: SkillType[] = [
   // { name: "HTML5", color: "241, 102, 42" },
   // { name: "CSS", color: "51, 169, 220" },
-  { name: "Tailwind", format: "webp", color: "0, 216, 255" },
-  { name: "Javascript", format: "webp", color: "247, 233, 30" },
   { name: "ReactJS", format: "webp", color: "0, 216, 255" },
+  { name: "Python", format: "webp", color: "56, 127, 185" },
   { name: "Typescript", format: "webp", color: "51, 169, 220" },
+  { name: "Tailwind", format: "webp", color: "0, 216, 255" },
   { name: "Express", format: "svg", color: "100, 100, 100" },
+  { name: "Javascript", format: "webp", color: "247, 233, 30" },
   { name: "Bootstrap", format: "webp", color: "117, 17, 247" },
   { name: "PHP", format: "webp", color: "97, 129, 182" },
-  { name: "Python", format: "webp", color: "56, 127, 185" },
 ];
 
 const Skills = () => {

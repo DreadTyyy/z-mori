@@ -9,21 +9,18 @@ import {
   Img,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import dataProjects from "../utils/dataProjects";
-import { easeTop, easeBottom } from "../utils/scrollAnimations";
+import dataProjects, { type ProjectType } from "@/utils/dataProjects";
+import { easeTop, easeBottom } from "@/utils/scrollAnimations";
 import { Link } from "react-router-dom";
 import { HiExternalLink } from "react-icons/hi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import TechIcons from "./TechIcons";
 
 const Project = () => {
-  const [projects, setProjects] = useState([]);
+  const projects: ProjectType[] = dataProjects(); 
   const toTop = easeTop();
   const toBottom = easeBottom();
-  useEffect(() => {
-    setProjects(() => dataProjects());
-  }, []);
+
   return (
     <Box id="projects">
       <Container

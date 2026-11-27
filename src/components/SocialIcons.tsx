@@ -1,59 +1,40 @@
 import { motion } from "framer-motion";
 import { Button } from "@chakra-ui/react";
-import { FaInstagram, FaGithub } from "react-icons/fa";
-import { SlSocialLinkedin } from "react-icons/sl";
 import ReactGA from "react-ga4";
-
-const socials = [
-  {
-    name: 'instagram',
-    href: 'https://www.instagram.com/adib.zaky_/',
-    icon: FaInstagram
-  },
-  {
-    name: 'linkedin',
-    href: 'https://www.linkedin.com/in/adibhzaky/',
-    icon: SlSocialLinkedin
-  },
-  {
-    name: 'github',
-    href: 'https://github.com/DreadTyyy/',
-    icon: FaGithub
-  },
-]
+import { socialMedia } from "@/utils/socialMedia";
 
 const SocialIcons = () => {
-  const handleClickButton = (item) => {
+  const handleClickButton = (item: string) => {
     ReactGA.event({ category: "social media", action: "click", label: item });
-    console.log(`Event click: ${item}`);
+    // console.log(`Event click: ${item}`);
   };
 
   return (
     <>
-    {socials.map((scl, index) => (
+    {socialMedia.map((scl, index) => (
         <motion.div 
           key={index}
-          initial={{ transform: 'translateY(0px)' }}
+          initial={{ transform: "translateY(0px)" }}
           animate={{ 
             transform: [
-              'translateY(5px)',
-              'translateY(-5px)',
-              'translateY(5px)',
+              "translateY(5px)",
+              "translateY(-5px)",
+              "translateY(5px)",
             ]
            }}
            transition={{ 
             duration: 1.5,
-            ease: 'linear',
+            ease: "linear",
             delay: index === 1 ? 0 : index * 0.1 + 0.2,
             times: [0, 0.5, 1],
             repeat: Infinity,
-            repeatType: 'loop'
+            repeatType: "loop"
             }}
         >
           <Button
             as="a"
             target="_blank"
-            href={scl.href}
+            href={scl.url}
             onClick={() => handleClickButton(scl.name)}
             px="0"
             color="secondary"

@@ -1,7 +1,7 @@
 import { Box, Container, Img, Heading, Text } from "@chakra-ui/react";
 import SocialIcons from "./SocialIcons";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { easeTop, easeLeft } from "../utils/scrollAnimations";
+import { easeTop, easeLeft } from "@/utils/scrollAnimations";
 
 const AboutMe = () => {
   const toTop = easeTop();
@@ -11,7 +11,7 @@ const AboutMe = () => {
   const rotateX = useTransform(cardY, [-600, 600], [10, -10]);
   const rotateY = useTransform(cardX, [-600, 600], [-10, 10]);
 
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     const offsetX = event.clientX - window.innerWidth / 2;
     const offsetY = event.clientY - window.innerHeight / 2;
 

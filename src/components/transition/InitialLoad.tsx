@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import PageTransition from "./PageTransition";
 import StairsTransition from "./StairsTransition";
 
-// eslint-disable-next-line react/prop-types
-const InitialLoad = ({ children }) => {
-  const [initial, setInitial] = useState(false);
+const InitialLoad = ({ children }: { children: React.ReactNode }) => {
+  const [initial, setInitial] = useState<boolean>(false);
 
   useEffect(() => {
     const data = sessionStorage.getItem("initial");
