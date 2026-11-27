@@ -8,7 +8,6 @@ import {
   DrawerContent,
   DrawerFooter,
   useDisclosure,
-  Show,
   // DrawerOverlay,
   // DrawerHeader,
 } from "@chakra-ui/react";
@@ -114,10 +113,9 @@ const Navbar = ({ isTop }: { isTop: boolean }) => {
           </Button>
           </motion.div>
         </Box>
-        <Button
+        <Box
           as="button"
           display={{ base: "flex", lg: "none" }}
-          variant="morilink"
           flexDir="column"
           gap={2}
           onClick={drawer.isOpen ? drawer.onClose : drawer.onOpen}>
@@ -152,19 +150,19 @@ const Navbar = ({ isTop }: { isTop: boolean }) => {
             transform={
               drawer.isOpen ? "rotate(45deg) translate(-5px, -1px)" : "none"
             }></Text>
-        </Button>
+        </Box>
         <Drawer
           placement="left"
           onClose={drawer.onClose}
           isOpen={drawer.isOpen}
-          // minH="100vh"
-          // zIndex="-1"
-          // minW="100vw"
           size="full">
           {/* <DrawerOverlay /> */}
           <DrawerContent 
             bg="rgba(25, 20, 38, 1)" 
             mt="66px"
+            minH="100vh"
+            minW="100vw"
+            zIndex="-1"
           >
             {/* <DrawerHeader
               color="#fff">
