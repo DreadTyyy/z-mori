@@ -2,6 +2,7 @@ import { Box, Container, Heading, Img, Text, Button } from "@chakra-ui/react";
 import AnimateUp from "./animations/AnimateUp";
 import OpenUp from "./animations/OpenUp";
 import SocialIcons from "./SocialIcons";
+import { MdDownload } from "react-icons/md";
 
 const Header = () => {
   return (
@@ -44,14 +45,35 @@ const Header = () => {
             <AnimateUp delay={0.1}><Text fontSize="24px" color="secondary">
               Welcome to my journey🚀
             </Text></AnimateUp>
-            <AnimateUp delay={0.2}><Button
-              mt={6}
-              as="a"
-              href="#contact"
-              variant="gradient"
-              rounded="999px">
-              Let&apos;s Connect
-            </Button></AnimateUp>
+            <AnimateUp delay={0.2}>
+              <Box 
+                display="flex" 
+                flexWrap="wrap"
+                gap={4}
+                pt={6}
+                pb={2}
+                pr={2}
+              >
+                <Button
+                  as="a"
+                  href="#contact"
+                  variant="gradient"
+                  rounded="999px">
+                  Let&apos;s Connect
+                </Button>
+                <Button
+                  as="a"
+                  href="/profile/curriculum_vitae_adib_haidar_zaky.pdf"
+                  download="curriculum_vitae_adib_haidar_zaky"
+                  display="flex"
+                  gap={1}
+                  variant="moriborder"
+                  rounded="999px">
+                  <MdDownload size="20" /> 
+                  <Text>Curriculum Vitae</Text>
+                </Button>
+              </Box>
+            </AnimateUp>
           </Box>
           <OpenUp>
             <Img
