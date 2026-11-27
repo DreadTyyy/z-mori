@@ -2,12 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 
-// eslint-disable-next-line react/prop-types
-const PageTransition = ({ children }) => {
-  const [animationComplete, setAnimationComplete] = useState(false);
-  const [showContent, setShowContent] = useState(false);
+const PageTransition = ({ children }: { children: React.ReactNode }) => {
+  const [animationComplete, setAnimationComplete] = useState<boolean>(false);
+  const [showContent, setShowContent] = useState<boolean>(false);
   const location = useLocation();
-  // eslint-disable-next-line no-unused-vars
   const { hash, pathname } = location;
 
   useEffect(() => {

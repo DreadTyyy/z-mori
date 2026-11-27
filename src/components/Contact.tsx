@@ -8,38 +8,16 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
-import { easeTop } from "../utils/scrollAnimations";
+import { easeTop } from "@/utils/scrollAnimations";
 import ReactGA from "react-ga4";
-import { FaInstagram, FaGithub } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { SlSocialLinkedin } from "react-icons/sl";
-
-const socialMedia = [
-  {
-    name: "Instagram",
-    username: "@adib.zky",
-    url: "https://www.instagram.com/adib.zaky_/",
-    icon: FaInstagram,
-  },
-  {
-    name: "LinkedIn",
-    username: "Adib Zaky",
-    url: "https://www.linkedin.com/in/adibhzaky/",
-    icon: SlSocialLinkedin,
-  },
-  {
-    name: "Github",
-    username: "DreadTyyy",
-    url: "https://github.com/DreadTyyy/",
-    icon: FaGithub,
-  },
-];
+import { socialMedia } from "@/utils/socialMedia";
 
 const Contact = () => {
   const toTop = easeTop();
-  const handleClickButton = (item) => {
+  const handleClickButton = (item: string) => {
     ReactGA.event({ category: "social media", action: "click", label: item });
-    console.log(`Event click: ${item}`);
+    // console.log(`Event click: ${item}`);
   };
   return (
     <Box id="contact">

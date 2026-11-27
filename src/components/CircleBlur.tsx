@@ -1,7 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import PropTypes from "prop-types";
 
-const CircleBlur = ({ top, left }) => {
+const CircleBlur = ({ 
+  top = "-50%", 
+  left = "-10%"
+}: {
+  top?: string;
+  left?: string;
+}) => {
   return (
     <Box
       zIndex="0"
@@ -12,15 +17,10 @@ const CircleBlur = ({ top, left }) => {
       mixBlendMode="overlay"
       position="fixed"
       rounded="100%"
-      top={top || "-50%"}
-      left={left || "-10%"}
+      top={top}
+      left={left}
       filter="blur(70px)"></Box>
   );
 };
 
 export default CircleBlur;
-
-CircleBlur.propTypes = {
-  top: PropTypes.string,
-  left: PropTypes.string,
-};

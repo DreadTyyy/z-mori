@@ -16,11 +16,23 @@ import {
   SiTensorflow,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { PropTypes } from "prop-types";
 import { Text } from "@chakra-ui/react";
+import type { IconType } from "react-icons";
 
-const TechIcons = ({ icon, customColor }) => {
-  const iconMap = {
+type IconTechType = {
+  name: IconType;
+  color: string;
+  size?: string;
+}
+
+const TechIcons = ({ 
+  icon, 
+  customColor 
+}: {
+  icon: string;
+  customColor?: string;
+}) => {
+  const iconMap: Record<string, IconTechType> = {
     react: { name: FaReact, color: "#23CDEB" },
     html: { name: FaHtml5, color: "#E44F26" },
     css: { name: FaCss3Alt, color: "#1572B6" },
@@ -56,8 +68,3 @@ const TechIcons = ({ icon, customColor }) => {
 };
 
 export default TechIcons;
-
-TechIcons.propTypes = {
-  icon: PropTypes.string.isRequired,
-  customColor: PropTypes.string,
-};

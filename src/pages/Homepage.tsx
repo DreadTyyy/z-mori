@@ -1,16 +1,18 @@
 import { useState, lazy, Suspense, useEffect } from "react";
-import { Box, Button, Text } from "@chakra-ui/react";
-import CircleBlur from "../components/CircleBlur";
-import InitialLoad from "../components/transition/InitialLoad";
-import { CiDesktopMouse2 } from "react-icons/ci";
 import ReactGA from "react-ga4";
+import { Box, Button, Text } from "@chakra-ui/react";
 
-const Navbar = lazy(() => import("../components/Navbar"));
-const Header = lazy(() => import("../components/Header"));
-const AboutMe = lazy(() => import("../components/AboutMe"));
-const Project = lazy(() => import("../components/Project"));
-const Skills = lazy(() => import("../components/Skills"));
-const Contact = lazy(() => import("../components/Contact"));
+import CircleBlur from "@/components/CircleBlur";
+import InitialLoad from "@/components/transition/InitialLoad";
+
+import { CiDesktopMouse2 } from "react-icons/ci";
+
+const Navbar = lazy(() => import("@/components/Navbar"));
+const Header = lazy(() => import("@/components/Header"));
+const AboutMe = lazy(() => import("@/components/AboutMe"));
+const Project = lazy(() => import("@/components/Project"));
+const Skills = lazy(() => import("@/components/Skills"));
+const Contact = lazy(() => import("@/components/Contact"));
 
 const Homepage = () => {
   ReactGA.send({
@@ -18,7 +20,7 @@ const Homepage = () => {
     page: "/",
     title: "home",
   });
-  const [isTop, setIsTop] = useState(true);
+  const [isTop, setIsTop] = useState<boolean>(true);
 
   useEffect(() => {
     document.title = "Adib Zaky — Portofolio"

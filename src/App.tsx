@@ -4,10 +4,10 @@ import {
   extendTheme,
 } from "@chakra-ui/react";
 import { Route, Routes } from "react-router";
+import ReactGA from "react-ga4";
 import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
 import NotFound from "./pages/NotFound";
-import ReactGA from "react-ga4";
 
 const Container = defineStyleConfig({
   // Styles for the base style

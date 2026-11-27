@@ -1,4 +1,20 @@
-const dataProjects = () => {
+export interface ProjectType {
+  id: number;
+  title: string;
+  cover: string;
+  bigCover: string;
+  pictures: string[];
+  slug: string;
+  category: string[];
+  description: string;
+  content: string[];
+  date: string;
+  technology: string[];
+  github: string;
+  urlSite: string;
+}
+
+const dataProjects = (): ProjectType[] => {
   return [
     {
       id: 7,

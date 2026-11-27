@@ -13,10 +13,9 @@ import {
   // DrawerHeader,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { PropTypes } from "prop-types";
-import { easeTop } from "../utils/scrollAnimations";
+import { easeTop } from "@/utils/scrollAnimations";
 
-const Navbar = ({ isTop }) => {
+const Navbar = ({ isTop }: { isTop: boolean }) => {
   const drawer = useDisclosure();
   const show = easeTop();
 
@@ -107,7 +106,7 @@ const Navbar = ({ isTop }) => {
           <motion.div 
             initial="offscreen"
             whileInView="onscreen"
-            variants={Show}
+            variants={show}
             viewport={{ once: true, amount: 0.8 }}
           >
           <Button as="a" href="#contact" variant="morilink" fontSize="16px">
@@ -115,7 +114,7 @@ const Navbar = ({ isTop }) => {
           </Button>
           </motion.div>
         </Box>
-        <Box
+        <Button
           as="button"
           display={{ base: "flex", lg: "none" }}
           variant="morilink"
@@ -131,7 +130,7 @@ const Navbar = ({ isTop }) => {
             transition="all 0.2s ease-in-out"
             transformOrigin="bottom"
             transform={
-              drawer.isOpen && "rotate(45deg) translate(5px, 2px)"
+              drawer.isOpen ? "rotate(45deg) translate(5px, 2px)" : "none"
             }></Text>
           <Text
             as="span"
@@ -140,7 +139,7 @@ const Navbar = ({ isTop }) => {
             h="2px"
             bgColor="secondary"
             transition="all 0.4s ease-in-out"
-            transform={drawer.isOpen && "rotate(315deg)"}></Text>
+            transform={drawer.isOpen ? "rotate(315deg)" : "none"}></Text>
           <Text
             as="span"
             className="hamburger-line"
@@ -151,19 +150,22 @@ const Navbar = ({ isTop }) => {
             transition="all 0.2s ease-in-out"
             transformOrigin="bottom"
             transform={
-              drawer.isOpen && "rotate(45deg) translate(-5px, -1px)"
+              drawer.isOpen ? "rotate(45deg) translate(-5px, -1px)" : "none"
             }></Text>
-        </Box>
+        </Button>
         <Drawer
           placement="left"
           onClose={drawer.onClose}
           isOpen={drawer.isOpen}
-          minH="100vh"
-          zIndex="-1"
-          minW="100vw"
+          // minH="100vh"
+          // zIndex="-1"
+          // minW="100vw"
           size="full">
           {/* <DrawerOverlay /> */}
-          <DrawerContent bg="rgba(25, 20, 38, 1)" mt="66px">
+          <DrawerContent 
+            bg="rgba(25, 20, 38, 1)" 
+            mt="66px"
+          >
             {/* <DrawerHeader
               color="#fff">
               <Box w="100%" h="32px"></Box>
@@ -236,7 +238,3 @@ const Navbar = ({ isTop }) => {
 };
 
 export default Navbar;
-
-Navbar.propTypes = {
-  isTop: PropTypes.bool,
-};
