@@ -17,6 +17,33 @@ export interface ProjectType {
 const dataProjects = (): ProjectType[] => {
   return [
     {
+      id: 8,
+      title: "MAPARTA",
+      cover: "maparta2.webp",
+      bigCover: "maparta-head.webp",
+      pictures: [
+        "maparta.webp",
+        "maparta2.webp",
+        "maparta3.webp",
+        "maparta4.webp",
+      ],
+      slug: "maparta",
+      category: ["Fullstack Development", "Mobile Apps Development", "UI/UX Design"],
+      description:
+        "MAPARTA: A smart navigation app with real-time weather info, packing suggestions, road condition reports, and recommended stop spots in Surakarta.",
+      content: [
+        "<i>Background</i>",
+        "Driver comfort is essential to ensuring driver safety on the road. Travelers frequently face unpredictable weather at the start, middle, or end of a trip, alongside sudden road condition changes that affect ride comfort. To address this, Maparta provides route-based weather information and practical packing recommendations for what to bring along. It also features a community-driven road condition reporting system where users can view, submit, and validate live reports from others along their journey. For long trips or unfamiliar areas, Maparta offers a Stop Spot feature that recommends resting and transit points tailored to user category preferences—ranging from restaurants and entertainment venues to gas stations—along the planned route.",
+        "<i>Development</i>",
+        "The application was developed from initial idea brainstorming through technical planning. Next, we mapped out the user flows and designed the user interfaces for both web and mobile platforms. The team then moved into development, building out all planned features across the frontend and backend. Once development was complete, the application underwent thorough testing to ensure all functionalities ran smoothly and met expectations. Finally, the application was deployed to production, making it accessible to the public.",
+        "The application's MVP features have been fully developed and are live online via https://maparta.id for the web version, while the mobile app is available for installation on the Google Play Store.",
+      ],
+      date: "2026",
+      technology: ["Flutter", "Express", "PostgreSql", "Laravel", "Figma"],
+      github: "",
+      urlSite: "https://play.google.com/store/apps/details?id=com.maparta.id",
+    },
+    {
       id: 7,
       title: "SociaLens",
       cover: "socialens2.png",
